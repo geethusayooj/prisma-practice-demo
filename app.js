@@ -7,7 +7,8 @@ require("dotenv").config();
 // Handles http requests (express is node js framework)
 // https://www.npmjs.com/package/express
 const express = require("express");
-
+const { PrismaClient } = require('@prisma/client'); // Import Prisma Client
+const prisma = new PrismaClient();
 const app = express();
 
 // ℹ️ This function is getting exported from the config folder. It runs most pieces of middleware
